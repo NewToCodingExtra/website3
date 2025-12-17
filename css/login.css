@@ -1,0 +1,115 @@
+.form_deg {
+    padding-top: 200px;
+}
+
+.label_deg {
+    display: inline-block;
+    color: skyblue;
+    width: 100px;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+    
+.login_form {
+    background-color: black;
+    width: 400px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.title_deg {
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.body_deg {
+    background-image: url('../images/school2.png');
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;  
+    background-attachment: fixed; 
+}
+
+.error_message {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+    padding: 0;
+}
+
+/* Red border for error input fields */
+input.input_error {
+    border: 2px solid #ff0000 !important;
+}
+
+/* Input wrapper for positioning error icons */
+.input_wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Error icon wrapper - contains icon and tooltip */
+.error_icon_wrapper {
+    position: absolute;
+    display: inline-block;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Error icon image styling */
+img.error_icon {
+    width: 20px !important;
+    height: 20px !important;
+    cursor: help !important;
+    display: block !important;
+}
+
+/* Tooltip text - hidden by default */
+.tooltip_text {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    background-color: #ff0000 !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 12px 18px !important;
+    border-radius: 10px !important;
+    position: absolute !important;
+    z-index: 1000 !important;
+    left: 35px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    white-space: nowrap !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    font-family: Arial, sans-serif !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5) !important;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out !important;
+    pointer-events: none !important;
+}
+
+/* Tooltip arrow pointing left */
+.tooltip_text::before {
+    content: '' !important;
+    position: absolute !important;
+    right: 100% !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    border: 10px solid transparent !important;
+    border-right-color: #ff0000 !important;
+}
+
+/* Show tooltip when hovering over icon wrapper */
+.error_icon_wrapper:hover .tooltip_text {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
