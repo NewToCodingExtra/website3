@@ -2,13 +2,13 @@
     session_start();
     
     // Only show errors if there's a session message (prevents fake URL manipulation)
-    if (isset($_SESSION['loginMessage'])) {
+    if (isset($_SESSION['errorMessage'])) {
         $error = $_GET['error'] ?? '';
         $showUsernameError = in_array($error, ['empty', 'emptyusername']);
         $showPasswordError = in_array($error, ['empty', 'emptypassword', 'wrongpassword']);
         $showBothError = in_array($error, ['empty', 'usernotfound']);
-        $errorMessage = $_SESSION['loginMessage'];
-        unset($_SESSION['loginMessage']);
+        $errorMessage = $_SESSION['errorMessage'];
+        unset($_SESSION['errorMessage']);
         $hasError = true;
     } else {
         $showUsernameError = false;

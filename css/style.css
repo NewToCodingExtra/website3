@@ -97,7 +97,7 @@ ul li a {
 }
 
 .adm_int {
-    padding-top: 10px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,8 +109,14 @@ ul li a {
     padding-right: 10px;
 }
 
+/* Input wrapper for positioning error icons */
+.input_wrapper {
+    position: relative;
+    display: inline-block;
+}
+
 .input_deg {
-    width: 30%;
+    width: 400px;  /* Fixed width instead of percentage */
     height: 40px;
     border-radius: 25px;
     border: 1px solid blue;
@@ -118,7 +124,7 @@ ul li a {
 }
 
 .input_txt {
-    width: 30%;
+    width: 400px;  /* Fixed width instead of percentage */
     height: 100px;
     border-radius: 15px;
     border: 1px solid blue;
@@ -126,13 +132,83 @@ ul li a {
     resize: none;
 }
 
+/* Red border for error fields */
+.input_error {
+    border: 2px solid #ff0000 !important;
+}
+
+/* Error icon wrapper - contains icon and tooltip */
+.error_icon_wrapper {
+    position: absolute;
+    display: inline-block;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Error icon image styling */
+img.error_icon {
+    width: 20px !important;
+    height: 20px !important;
+    cursor: help !important;
+    display: block !important;
+}
+
+/* Tooltip text - hidden by default */
+.tooltip_text {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    background-color: #ff0000 !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 12px 18px !important;
+    border-radius: 10px !important;
+    position: absolute !important;
+    z-index: 1000 !important;
+    left: 35px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    white-space: nowrap !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    font-family: Arial, sans-serif !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5) !important;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out !important;
+    pointer-events: none !important;
+}
+
+/* Tooltip arrow pointing left */
+.tooltip_text::before {
+    content: '' !important;
+    position: absolute !important;
+    right: 100% !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    border: 10px solid transparent !important;
+    border-right-color: #ff0000 !important;
+}
+
+/* Show tooltip when hovering over icon wrapper */
+.error_icon_wrapper:hover .tooltip_text {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Success message styling */
+.success_message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 #submit {
-    position: relative;
-    width: 15%;
-    left: 0;  
-    margin: 0 auto;  
-    display: block; 
-    margin-top: 10px;
+    margin-left: 110px; /* Align with inputs (100px label + 10px padding) */
 }
 
 .footer_dvd {

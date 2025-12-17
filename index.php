@@ -1,3 +1,34 @@
+<?php
+    session_start();
+    
+    // Only show errors if there's a session message (prevents fake URL manipulation)
+    if (isset($_SESSION['errorMessage'])) {
+        $error = $_GET['error'] ?? '';
+        $showNameError = in_array($error, ['empty_name']);
+        $showEmailError = in_array($error, ['empty_email', 'invalid_email']);
+        $showPhoneError = in_array($error, ['empty_phone', 'invalid_phone']);
+        $showAllError = in_array($error, ['system_error', 'submission_failed', 'invalid_request', 'all_empty']);
+        $errorMessage = $_SESSION['errorMessage'];
+        unset($_SESSION['errorMessage']);
+        $hasError = true;
+    } else {
+        $showNameError = false;
+        $showEmailError = false;
+        $showPhoneError = false;
+        $showAllError = false;
+        $errorMessage = '';
+        $hasError = false;
+    }
+    
+    // Check for success message
+    $showSuccess = false;
+    $successMessage = '';
+    if (isset($_SESSION['successMessage'])) {
+        $showSuccess = true;
+        $successMessage = $_SESSION['successMessage'];
+        unset($_SESSION['successMessage']);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +45,34 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <?php if ($hasError): ?>
+    <script>
+        // Remove error parameter from URL without creating browser history
+        if (window.location.search.includes('error=')) {
+            // Let the browser scroll to the anchor first
+            setTimeout(() => {
+                // Then remove both query parameter and hash
+                const url = window.location.origin + window.location.pathname;
+                window.history.replaceState({}, document.title, url);
+            }, 100); // Small delay to allow scrolling
+        }
+    </script>
+    <?php endif; ?>
+    
+    <?php if ($showSuccess): ?>
+    <script>
+        // Remove success parameter from URL without creating browser history
+        if (window.location.search.includes('success=')) {
+            // Let the browser scroll to the anchor first
+            setTimeout(() => {
+                // Then remove both query parameter and hash
+                const url = window.location.origin + window.location.pathname;
+                window.history.replaceState({}, document.title, url);
+            }, 100); // Small delay to allow scrolling
+        }
+    </script>
+    <?php endif; ?>
 </head>
 <body>
 <!--<h1>This is school management system!</h1>-->
@@ -91,29 +150,68 @@
     </div>
 
     <center>
-        <h1 class="adm">Admission Form</h1>
+        <h1 class="adm" id="admission_form">Admission Form</h1>
+        <?php if ($showSuccess): ?>
+            <div class="success_message">
+                ✓ <?= $successMessage ?>
+            </div>
+        <?php endif; ?>
     </center>
 
     <div align="center" class="admission_form">
         <form action="php/data_check.php" method="POST">
             <div class="adm_int">
                 <label class="label_text">Name</label>
-                <input class="input_deg" type="text" name="name">
+                <span class="input_wrapper">
+                    <input class="input_deg <?= $showNameError ? 'input_error' : '' ?>" type="text" name="name">
+                    <?php if ($showNameError): ?>
+                        <span class="error_icon_wrapper">
+                            <img src="images/error_icon.png" alt="Error" class="error_icon">
+                            <span class="tooltip_text"><?= $errorMessage ?></span>
+                        </span>
+                    <?php endif; ?>
+                </span>
             </div>
             <div class="adm_int">
                 <label class="label_text">Email</label>
-                <input class="input_deg" type="text" name="email">
+                <span class="input_wrapper">
+                    <input class="input_deg <?= $showEmailError ? 'input_error' : '' ?>" type="text" name="email">
+                    <?php if ($showEmailError): ?>
+                        <span class="error_icon_wrapper">
+                            <img src="images/error_icon.png" alt="Error" class="error_icon">
+                            <span class="tooltip_text"><?= $errorMessage ?></span>
+                        </span>
+                    <?php endif; ?>
+                </span>
             </div>
             <div class="adm_int">
                 <label class="label_text">Phone</label>
-                <input class="input_deg" type="text" name="phone">
+                <span class="input_wrapper">
+                    <input class="input_deg <?= $showPhoneError ? 'input_error' : '' ?>" type="text" name="phone">
+                    <?php if ($showPhoneError): ?>
+                        <span class="error_icon_wrapper">
+                            <img src="images/error_icon.png" alt="Error" class="error_icon">
+                            <span class="tooltip_text"><?= $errorMessage ?></span>
+                        </span>
+                    <?php endif; ?>
+                </span>
             </div>
             <div class="adm_int">
                 <label class="label_text">Message</label>
-                <textarea class="input_txt" name="message"></textarea>
+                <span class="input_wrapper">
+                    <textarea class="input_txt" name="message"></textarea>
+                </span>
             </div>
             <div class="adm_int">
-                <input class="btn btn-primary" id="submit" type="submit" value="Apply">
+                <span class="input_wrapper">
+                    <input class="btn btn-primary" id="submit" type="submit" name="apply" value="Apply">
+                    <?php if ($showAllError): ?>
+                        <span class="error_icon_wrapper">
+                            <img src="images/error_icon.png" alt="Error" class="error_icon">
+                            <span class="tooltip_text"><?= $errorMessage ?></span>
+                        </span>
+                    <?php endif; ?>
+                </span>
             </div>
         </form>
     </div>
