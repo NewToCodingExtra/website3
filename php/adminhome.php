@@ -36,31 +36,31 @@
     <aside>
         <ul>
             <li>
-                <a href="">Admission</a>
+                <a href="admission.php">Admission</a>
             </li>
             <li>
-                <a href="">Add Student</a>
+                <a href="under_construction.php">Add Student</a>
             </li>
             <li>
-                <a href="">View Student</a>
+                <a href="under_construction.php">View Student</a>
             </li>
             <li>
-                <a href="">Add Teacher</a>
+                <a href="under_construction.php">Add Teacher</a>
             </li>
             <li>
-                <a href="">View Teacher</a>
+                <a href="under_construction.php">View Teacher</a>
             </li>
             <li>
-                <a href="">Add Courses</a>
+                <a href="under_construction.php">Add Courses</a>
             </li>
             <li>
-                <a href="">View Courses</a>
+                <a href="under_construction.php">View Courses</a>
             </li>
             <li>
-                <a href="">Add Section</a> 
+                <a href="under_construction.php">Add Section</a> 
             </li>
             <li>
-                <a href="">View Section</a> 
+                <a href="under_construction.php">View Section</a> 
             </li>
         </ul>
     </aside>

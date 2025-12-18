@@ -79,9 +79,9 @@
     <nav>
         <label class="logo">W-School</label>
         <ul>
-            <li><a href ="php/home.php">Home</a></li>
-            <li><a href ="php/contact.php">Contact</a></li>
-            <li><a href ="php/admission.php">Admission</a></li>
+            <li><a href ="php/under_construction.php">Home</a></li>
+            <li><a href ="php/under_construction.php">Contact</a></li>
+            <li><a href ="php/under_construction.php">Admission</a></li>
             <li><a href ="php/login.php" class="btn btn-success">Login</a></li>
         </ul>
     </nav>

@@ -1,2 +1,9 @@
 [2025-12-17 12:58:49] [login_check.php] Failed login attempt - User not found: Joshua
 [2025-12-17 12:58:59] [login_check.php] Failed login attempt for user: admin - Incorrect password
+[2025-12-18 10:34:21] [login_check.php] User 'admin' logged in successfully
+[2025-12-18 10:46:01] [login_check.php] Failed login attempt for user: admin - Incorrect password
+[2025-12-18 10:46:32] [login_check.php] User 'John Doe' logged in successfully
+[2025-12-18 10:47:39] [login_check.php] User 'John Doe' logged in successfully
+[2025-12-18 10:58:23] [logout.php] User 'John Doe' logged out
+[2025-12-18 10:58:54] [login_check.php] User 'admin' logged in successfully
+[2025-12-18 10:59:05] [logout.php] User 'admin' logged out

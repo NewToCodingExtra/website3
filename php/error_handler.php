@@ -63,11 +63,11 @@
                 return (strlen($phone) >= 10 && strlen($phone) <= 15) ? $phone : false;
             
             case 'text':
-                // Remove HTML tags and special characters
-                return htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
+                // Return as raw text if its a text
+                return $input;
             
             default:
-                return htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
+                return $input;
         }
     }
 ?>

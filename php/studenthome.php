@@ -36,31 +36,31 @@
     <aside>
         <ul>
             <li>
-                <a href="">My Courses</a> 
+                <a href="under_construction.php">My Courses</a> 
             </li>
             <li>
-                <a href="">Assignments</a>  
+                <a href="under_construction.php">Assignments</a>  
             </li>
             <li>
-                <a href="">Grades</a>  
+                <a href="under_construction.php">Grades</a>  
             </li>
             <li>
-                <a href="">Schedule</a> 
+                <a href="under_construction.php">Schedule</a> 
             </li>
             <li>
-                <a href="">Profile</a>  
+                <a href="under_construction.php">Profile</a>  
             </li>
             <li>
-                <a href="">Registration Form</a> 
+                <a href="under_construction.php">Registration Form</a> 
             </li>
             <li>
-                <a href="">Pre-Registration</a> 
+                <a href="under_construction.php">Pre-Registration</a> 
             </li>
             <li>
-                <a href="">Enrollment</a> 
+                <a href="under_construction.php">Enrollment</a> 
             </li>
             <li>
-                <a href="">Graduation</a> 
+                <a href="under_construction.php">Graduation</a> 
             </li>
         </ul>
     </aside>
