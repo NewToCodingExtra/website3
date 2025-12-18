@@ -7,3 +7,12 @@
 [2025-12-18 10:58:23] [logout.php] User 'John Doe' logged out
 [2025-12-18 10:58:54] [login_check.php] User 'admin' logged in successfully
 [2025-12-18 10:59:05] [logout.php] User 'admin' logged out
+[2025-12-18 11:05:00] [login_check.php] User 'admin' logged in successfully
+[2025-12-18 11:18:30] [login_check.php] User 'admin' logged in successfully
+[2025-12-18 11:19:37] [login_check.php] User 'admin' logged in successfully
+[2025-12-18 11:19:52] [login_check.php] User 'admin' logged in successfully
+[2025-12-18 11:21:06] [login_check.php] User 'admin' logged in successfully
+[2025-12-18 11:21:14] [logout.php] User 'admin' logged out
+[2025-12-18 11:22:22] [login_check.php] User 'admin' logged in successfully
+[2025-12-18 12:03:35] [logout.php] User 'admin' logged out
+[2025-12-18 12:04:05] [login_check.php] User 'admin' logged in successfully

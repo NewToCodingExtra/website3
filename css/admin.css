@@ -9,6 +9,11 @@
     padding-left: 30px;
 }
 
+.admin_header_deg {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
 a,a:hover {
     text-decoration: none !important;
 }
