@@ -1,0 +1,16 @@
+.title_deg {
+    padding-bottom: 5px;
+}
+
+.admission_table {
+    border-collapse: collapse;
+    border: 1.5px solid black;  
+    width: 100%;
+}
+
+.admission_table th,
+.admission_table td {
+    border: 1.25px solid black;   
+    padding: 20px;
+    font-size: 15px;
+}

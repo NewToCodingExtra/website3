@@ -16,3 +16,12 @@
 [2025-12-18 11:22:22] [login_check.php] User 'admin' logged in successfully
 [2025-12-18 12:03:35] [logout.php] User 'admin' logged out
 [2025-12-18 12:04:05] [login_check.php] User 'admin' logged in successfully
+[2025-12-18 12:11:26] [logout.php] User 'admin' logged out
+[2025-12-18 12:12:01] [login_check.php] User 'admin' logged in successfully
+[2025-12-18 12:57:52] [logout.php] User 'admin' logged out
+[2025-12-18 12:58:40] [login_check.php] User 'admin' logged in successfully
+[2025-12-18 13:24:03] [logout.php] User 'admin' logged out
+[2025-12-18 13:24:11] [login_check.php] User 'John Doe' logged in successfully
+[2025-12-18 13:26:11] [logout.php] User 'John Doe' logged out
+[2025-12-18 13:26:18] [login_check.php] Failed login attempt for user: admin - Incorrect password
+[2025-12-18 13:26:27] [login_check.php] User 'admin' logged in successfully

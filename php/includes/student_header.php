@@ -32,9 +32,6 @@
                 <a href="under_construction.php">My Courses</a> 
             </li>
             <li>
-                <a href="under_construction.php">Assignments</a>  
-            </li>
-            <li>
                 <a href="under_construction.php">Grades</a>  
             </li>
             <li>
@@ -45,9 +42,6 @@
             </li>
             <li>
                 <a href="under_construction.php">Registration Form</a> 
-            </li>
-            <li>
-                <a href="under_construction.php">Pre-Registration</a> 
             </li>
             <li>
                 <a href="under_construction.php">Enrollment</a> 

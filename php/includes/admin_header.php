@@ -13,6 +13,7 @@
     <title><?= $page_title ?? 'Admin Dashboard' ?></title>
 
     <link rel="stylesheet" type="text/css" href="../css/admin.css">
+    <link rel="stylesheet" type="text/css" href="../css/admission.css">
 
     <?php include "css_bootstrap.php" ?>
 </head>
@@ -49,12 +50,7 @@
             <li>
                 <a href="under_construction.php">View Courses</a>
             </li>
-            <li>
-                <a href="under_construction.php">Add Section</a> 
-            </li>
-            <li>
-                <a href="under_construction.php">View Section</a> 
-            </li>
+    
         </ul>
     </aside>
 

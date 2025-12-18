@@ -1,60 +1,82 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
     background-color: skyblue;
-    line-height: 70px;
-    padding-left: 30px;
-}
 
+    display: flex;
+    align-items: center;            
+    justify-content: space-between; 
+    padding: 0 30px;                
+}
 .admin_header_deg {
     font-size: 18px;
-    font-weight: bolder;
-}
-
-a,a:hover {
+    font-weight: 700;
     text-decoration: none !important;
 }
 
 .logout {
-    float: right;
-    padding-right: 30px;
+    
+    margin-left: 10px;
 }
 
-ul {
-    background-color: #424a5b;
-    width: 16%;
-    height: 100%;
-    position: fixed;
-    padding-top: 5%;
-    padding-right: 50px;
-    text-align: right;
+a { color: inherit; text-decoration: none !important; }
+a:hover { text-decoration: none !important; }
 
+ul {
+    position: fixed;
+    top: 70px;                          
+    left: 0;
+    width: 16%;                         
+    height: calc(100% - 70px);           
+    background-color: #424a5b;
+    padding: 0 50px 0 12px;      
+    text-align: right;
+    overflow-y: auto;                    
+    display: flex;
+    flex-direction: column;      
+    justify-content: center;                   
 }
 
 ul li {
-    list-style-type: none;
-    padding-bottom: 30px;
+    list-style: none;
+    margin-bottom: 30px;  
     font-size: 15px;
 }
-
 ul li a {
+    display: inline-block;  
     color: white;
-    font-weight: bold;
-    display: inline-block;
+    font-weight: 700;
+    padding: 6px 8px;
+    transform-origin: center;
 }
 
 ul li a:hover {
     color: skyblue;
     transform: scale(1.1);
-    transition: transform 0.5s, color 0.5s;
-    text-decoration: none;
+    transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .content {
-    margin-left: 20%;
-    margin-top: 5%;
-    margin-right: 50px;
+    margin-left: 16%;        
+    margin-top: 70px;        
+    margin-right: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 900px) {
+    ul {
+        width: 220px;
+        left: 0;               
+    }
+    .content {
+        margin-left: 220px;
+    }
 }
