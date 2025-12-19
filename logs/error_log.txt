@@ -25,3 +25,13 @@
 [2025-12-18 13:26:11] [logout.php] User 'John Doe' logged out
 [2025-12-18 13:26:18] [login_check.php] Failed login attempt for user: admin - Incorrect password
 [2025-12-18 13:26:27] [login_check.php] User 'admin' logged in successfully
+[2025-12-19 13:09:41] [login_check.php] User 'admin' logged in successfully
+[2025-12-19 13:20:00] [logout.php] User 'admin' logged out
+[2025-12-19 13:20:19] [login_check.php] User 'John Doe' logged in successfully
+[2025-12-19 13:20:29] [logout.php] User 'John Doe' logged out
+[2025-12-19 13:20:54] [login_check.php] User 'admin' logged in successfully
+[2025-12-19 13:34:02] [logout.php] User 'admin' logged out
+[2025-12-19 13:36:20] [login_check.php] User 'admin' logged in successfully
+[2025-12-19 13:37:01] [logout.php] User 'admin' logged out
+[2025-12-19 13:38:50] [login_check.php] User 'admin' logged in successfully
+[2025-12-19 13:39:51] [logout.php] User 'admin' logged out

@@ -1,16 +1,161 @@
 .title_deg {
-    padding-bottom: 5px;
+    padding-bottom: 20px;
+    color: #333;
 }
 
 .admission_table {
     border-collapse: collapse;
-    border: 1.5px solid black;  
     width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    table-layout: fixed;  
 }
 
-.admission_table th,
+.admission_table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.admission_table th {
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    border: none;
+}
+
+.admission_table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+}
+
+.admission_table tbody tr:hover {
+    background-color: #f5f7ff;
+}
+
+.admission_table tbody tr:last-child {
+    border-bottom: none;
+}
+
 .admission_table td {
-    border: 1.25px solid black;   
-    padding: 20px;
-    font-size: 15px;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: #555;
+    border: none;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Truncated cell with tooltip */
+.truncate-cell {
+    position: relative;
+    cursor: help;
+    white-space: nowrap;
+}
+
+.truncate-cell:hover::after {
+    content: attr(data-full-text);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    white-space: normal;
+    z-index: 1000;
+    min-width: 200px;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Message cell styling */
+.message-cell {
+    position: relative;
+}
+
+.submission-count {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.message-container {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 5px 0;
+}
+
+/* Custom scrollbar for message container */
+.message-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.message-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.message-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.message-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border-left: 3px solid #667eea;
+    border-radius: 4px;
+}
+
+.message-item:last-child {
+    margin-bottom: 0;
+}
+
+.message-timestamp {
+    font-size: 11px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.message-text {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+/* Empty state styling */
+.admission_table .empty-state {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 40px 20px;
+}
+
+/* Striped rows */
+.admission_table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.admission_table tbody tr:nth-child(even):hover {
+    background-color: #f5f7ff;
 }
